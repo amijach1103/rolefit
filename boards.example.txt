@@ -1,0 +1,5 @@
+# One board slug per line. The slug is not always the company name:
+# when an API 404s, curl the careers page and grep it for `for=<slug>`.
+gitlab
+mercury
+drata
