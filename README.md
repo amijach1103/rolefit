@@ -106,3 +106,7 @@ source, and the repo ships a fictional profile.
   company with an office there.
 
 MIT.
+
+---
+
+The thinking behind this is at [aguedaschwartz.com/practice](https://aguedaschwartz.com/practice).
