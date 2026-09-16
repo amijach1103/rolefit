@@ -68,6 +68,28 @@ the point of running it: a harness that can't fail a bad scorer isn't a harness.
 
 ---
 
+## The fixtures, and what each one catches
+
+Four labelled cases in `fixtures/scoring.json`. Each exists because a scorer can
+fail in a specific way, and the `why` field records which way.
+
+| Fixture | Expected | What it catches |
+|---|---|---|
+| `keyword-rich-substrate-poor` | weak | A posting that shares the profile's entire vocabulary and describes different work. A design-systems req full of "adoption", "accessibility programs" and "framework adoption" reads as a match to anything counting keywords. |
+| `substrate-match-no-title-match` | strong | The opposite error. A posting describing work the profile has done, under a title it has never held. A title-matching scorer calls this weak. It is the strongest case in the set. |
+| `adjacent-but-not-the-same` | partial | Revenue Operations: real overlap on research and measurement, real gap on the commercial half. A scorer that only answers strong or weak is wrong here by construction. |
+| `credential-wall` | weak | A Registered Nurse licence. No wording fixes a licence, and a scorer reasoning about transferable skills will try. |
+
+Two of the four are traps pointing in opposite directions, because a scorer that
+always over-matches and one that always under-matches both score 50% on a set
+that only tests one direction.
+
+The eleven gate tests carry their history in their names: `the_abbreviation_bug`,
+`same_number_different_noun`, `ignores_figures_that_are_not_pay`. Each was a real
+defect before it was a test.
+
+---
+
 ## What writing the tests found
 
 Two defects in code that had already produced results:
