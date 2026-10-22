@@ -1,0 +1,33 @@
+# Example profile. Everything the tool knows about a candidate lives here.
+# Nothing personal belongs in source. Copy to profile.yaml (gitignored) and edit.
+
+residency:
+  # Where the candidate actually lives. Used to catch "Remote - US" postings
+  # that exclude specific metros in the body of the description.
+  metro: ["New York", "NYC", "N.Y."]
+
+compensation:
+  # Screening floor. A posting below this is ranked down, never hidden.
+  floor_usd: 95000    # fictional
+
+# Years by LANE, not by career total. A stated floor almost always qualifies a
+# lane ("5+ years in product management"), and the career total does not answer it.
+lanes:
+  # Fictional. Real numbers belong in profile.yaml, which is gitignored.
+  widget_management: 4.0
+  field_operations: 6.0
+  technical_writing: 2.0
+
+# Role families the candidate cannot hold, for reasons no wording fixes:
+# a licence, a degree, or a credential.
+excluded_families:
+  - software_engineering
+  - clinical
+  - legal
+  - licensed_finance
+
+# Titles the candidate has actually held. Screeners read the title column first,
+# so a title the candidate has never held is a scoring signal, not a disqualifier.
+held_titles:
+  - Widget Manager
+  - Field Operations Lead

@@ -1,0 +1,30 @@
+[
+  {
+    "id": "keyword-rich-substrate-poor",
+    "expect": "weak",
+    "why": "Shares the profile's entire vocabulary and describes different work. The trap this fixture exists for.",
+    "title": "Product Designer, Design Systems",
+    "body": "Own our component library and token architecture. Build and maintain accessibility programs across a multi-brand design system. Partner with front-end engineers on framework adoption. Ship native iOS and Android patterns."
+  },
+  {
+    "id": "substrate-match-no-title-match",
+    "expect": "strong",
+    "why": "The profile has never held this title and has done exactly this work.",
+    "title": "AI Enablement Lead",
+    "body": "Map current-state workflows with stakeholders before building. Ship internal agentic tools that solve one measurable problem each. Define success metrics and make the ROI case to skeptical teams. Run workshops and office hours to drive adoption."
+  },
+  {
+    "id": "adjacent-but-not-the-same",
+    "expect": "partial",
+    "why": "Real overlap on research and measurement, real gap on the commercial half.",
+    "title": "Revenue Operations Manager",
+    "body": "Own pipeline reporting and forecast accuracy. Partner with Sales leadership on territory design and quota setting. Instrument the funnel and report on conversion by stage."
+  },
+  {
+    "id": "credential-wall",
+    "expect": "weak",
+    "why": "No wording fixes a licence.",
+    "title": "Clinical Program Manager",
+    "body": "Registered Nurse licence required. Oversee care protocols and clinical quality review across partner sites."
+  }
+]
